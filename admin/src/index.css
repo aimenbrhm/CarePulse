@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar{
+    @apply hidden
+}
+*{
+    font-family: Outfit;
+}
+/* Custom placeholder color for dark mode */
+.dark ::placeholder {
+  color: #111 !important;
+  opacity: 1 !important;
+}
+/* Custom option color for dark mode */
+.dark select, .dark option {
+  color: #111 !important;
+}
+/* Input, textarea, and select text color for dark mode forms */
+.dark input,
+.dark textarea,
+.dark select {
+  color: #111 !important;
+}
+
+/* Light mode: white bg, black text */
+input, textarea, select {
+  color: #111 !important;
+  background-color: #fff !important;
+}
+input::placeholder {
+  color: #888 !important;
+  opacity: 1 !important;
+}
+/* Dark mode: dark bg, white text */
+.dark input, .dark textarea, .dark select {
+  color: #fff !important;
+  background-color: #232a36 !important;
+}
+.dark input::placeholder, .dark textarea::placeholder, .dark select::placeholder {
+  color: #bbb !important;
+}
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:focus,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: 0 0 0px 1000px #232a36 inset !important;
+  background-color: #232a36 !important;
+  color: #fff !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #111 !important;
+  box-shadow: 0 0 0px 1000px #fff inset !important;
+  background-color: #fff !important;
+  color: #111 !important;
+}

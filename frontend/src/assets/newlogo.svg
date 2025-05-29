@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40">
+  <!-- Compact heartbeat line -->
+  <path d="M10,20 L20,20 L25,10 L30,30 L35,15 L40,20 L50,20" 
+        fill="none" 
+        stroke="#0284c7" 
+        stroke-width="3" 
+        stroke-linecap="round"/>
+  
+  <!-- Small heart -->
+  <path d="M50,20 C50,16 55,10 60,10 C67,10 67,18 60,22 C55,24 50,23 50,20 Z" 
+        fill="#0284c7"/>
+  
+  <!-- Logo Text - Smaller -->
+  <text x="70" y="25" font-family="Arial, sans-serif" font-weight="700" font-size="16" fill="#0f172a">Care<tspan font-weight="600" fill="#0284c7">Pulse</tspan></text>
+</svg>
