@@ -32,7 +32,9 @@ export default function BlogPostCard({ post, onClick, onEdit, onDelete }) {
       <img
         src={
           post.images && post.images.length > 0
-            ? `http://localhost:4000${post.images[0]}`
+            ? (post.images[0].startsWith('http')
+                ? post.images[0]
+                : `${import.meta.env.VITE_BACKEND_URL}${post.images[0]}`)
             : 'https://via.placeholder.com/400x200?text=No+Image'
         }
         alt={post.title}
