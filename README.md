@@ -10,11 +10,13 @@ Admin & Doctor Side:
 https://carepulseadmin-doc.netlify.app
 
 👤 Test Accounts
+
 Patient Login
 Email: aimen@gmail.com
 Password: 12345678
 
 Alternate Patient:
+
 Email: oussamabrhm@gmail.com
 Password: 12345678
 Or: Create a new account for a better experience.
@@ -23,11 +25,13 @@ Or: Create a new account for a better experience.
 
 Doctor Login
 Use an existing doctor (entered by admin):
+
 Email: emily@gmail.com
 Password: 12345678
 
 
 Admin Login :
+
 Email: admin@gmail.com
 Password: qwerty123
 (Make sure you are on the admin login page.)
