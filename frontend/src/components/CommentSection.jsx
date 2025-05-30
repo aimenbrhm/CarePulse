@@ -9,7 +9,7 @@ export default function CommentSection({ postId }) {
 
   useEffect(() => {
     // Fetch comments from backend
-    fetch(`/api/blog/${postId}/comments`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blog/${postId}/comments`)
       .then(res => res.json())
       .then(data => setComments(Array.isArray(data) ? data : []))
       .catch(() => setComments([]));
@@ -20,7 +20,7 @@ export default function CommentSection({ postId }) {
     try {
       const author = userData && userData.name ? userData.name : 'Anonymous';
       const authorAvatar = userData && userData.image ? userData.image : defaultAvatar;
-      const res = await fetch(`/api/blog/${postId}/comments`, {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blog/${postId}/comments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: input, author, authorAvatar })

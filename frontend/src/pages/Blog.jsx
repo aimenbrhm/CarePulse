@@ -35,7 +35,7 @@ const Blog = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('/api/blog')
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blog`)
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
@@ -77,7 +77,7 @@ const Blog = () => {
         formData.append('medicalDisclaimer', newPost.medicalDisclaimer || '');
         (newPost.tags || []).forEach(tag => formData.append('tags', tag));
         (newPost.images || []).forEach(file => formData.append('images', file));
-        const res = await fetch('/api/blog', {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blog`, {
           method: 'POST',
           headers: {
             ...(token ? { Authorization: `Bearer ${token}` } : {}),

@@ -21,7 +21,7 @@ const Reviews = () => {
 
     const fetchReviews = async () => {
         try {
-            const response = await axios.get('/api/reviews');
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/reviews`);
             setReviews(Array.isArray(response.data) ? response.data : []);
         } catch (error) {
             setReviews([]);
@@ -40,7 +40,7 @@ const Reviews = () => {
         }
         setSubmitting(true);
         try {
-            await axios.post('/api/reviews', { ...newReview, userId: userData._id }, { headers: { token } });
+            await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/reviews`, { ...newReview, userId: userData._id }, { headers: { token } });
             setNewReview({ name: '', role: '', rating: 5, quote: '' });
             toast.success('Review submitted!');
             fetchReviews();
@@ -69,7 +69,7 @@ const Reviews = () => {
         e.preventDefault();
         if (!token || !userData) return;
         try {
-            await axios.put(`/api/reviews/${editingId}`, { ...editReview, userId: userData._id }, { headers: { token } });
+            await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/reviews/${editingId}`, { ...editReview, userId: userData._id }, { headers: { token } });
             toast.success('Review updated!');
             setEditingId(null);
             setEditReview({ name: '', role: '', rating: 5, quote: '' });
@@ -82,7 +82,7 @@ const Reviews = () => {
     const handleDelete = async (id) => {
         if (!window.confirm('Are you sure you want to delete this review?')) return;
         try {
-            await axios.delete(`/api/reviews/${id}`, { data: { userId: userData._id }, headers: { token } });
+            await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/reviews/${id}`, { data: { userId: userData._id }, headers: { token } });
             toast.success('Review deleted!');
             fetchReviews();
         } catch {
