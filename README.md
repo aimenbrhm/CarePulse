@@ -19,6 +19,7 @@ Alternate Patient:
 
 Email: oussamabrhm@gmail.com
 Password: 12345678
+
 Or: Create a new account for a better experience.
 
 ⚡ Note 1: Please fill out your medical record and profile information before making appointments.
