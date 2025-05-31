@@ -45,22 +45,23 @@ https://carepulse-2-06qh.onrender.com
 
 🖥️ Running the Project Locally
 1. Clone the Repository : 
-git clone <your-repo-url>
+git clone https://github.com/aimenbrhm/CarePulse.git
+
 cd versionfinale
-2. Install Dependencies
+3. Install Dependencies
 For each of the following, run:
 npm install
 in these directories:
 /backend
 /frontend
 /admin
-3. Start the Backend
+4. Start the Backend
 cd backend
 npm run server
-4. Start the Frontend (Patient Side)
+5. Start the Frontend (Patient Side)
 cd frontend
 npm run dev
-5. Start the Admin/Doctor Panels
+6. Start the Admin/Doctor Panels
 cd admin
 npm run dev
 📦 Required Packages
